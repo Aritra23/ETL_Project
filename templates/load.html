@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!--For Button-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="/static/style.css">
+        <title>Chicago Restaurants - Load</title>
+      </head>
+
+<body>
+  <div class="container">
+    <div class='row'>
+        <div class='col-sm-12'>
+        <div class="jumbotron text-center">
+          
+          <h1>Inspection Ratings of Some Chicago Restaurants</h1>
+          <h3>Team: Aritra Lahiri, Brenda Daly, Diana Dinshaw</h3>
+        </div>
+      </div>
+      </div>
+    
+      <div class="container">
+        <a href="/" class="btn btn-info" role="button">Back</a> 
+      </div>
+
+    <div class="center-di">
+      <table align=center border='1'>
+        <tr>
+                <th>Restaurant Name</th>
+                <th>Inspection Result</th>
+                <th>Risk</th>
+                <th>Diner Ratings</th>
+        </tr>
+
+        {% for restaurant in restaurants %}
+                <tr>
+                        <td>{{restaurant.DBA_Name }}</td>
+                        <td>{{ restaurant.Results }}</td>
+                        <td>{{ restaurant.Risk}}</td>
+                        <td>{{restaurant.ratings}}</td>
+
+                </tr>
+        {% endfor %}
+</table>
+        
+    </div>
+  </div>
+</body>
+
+</html>
