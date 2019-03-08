@@ -6,9 +6,9 @@
     border: .5px solid black;
     margin: 10px
 }
-
-.nav {font-size: 63px;
-    color: black
+.center-div {
+     margin: 0 auto;
+     width: 100px; 
 }
 
 .head {text-align: center
