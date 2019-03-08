@@ -25,7 +25,7 @@ def index():
 @app.route('/load')
 def load():
 
-    restaurants = mongo.db.restaurants.find()
+    restaurants = db.restaurants.find()
     return render_template("load.html", restaurants=restaurants)
 
 if __name__=='__main__':
